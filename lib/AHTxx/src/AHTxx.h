@@ -135,7 +135,7 @@ AHTXX_I2C_SENSOR;
 class AHTxx
 {
   public:
-   AHTxx(uint8_t address = AHTXX_ADDRESS_X38, AHTXX_I2C_SENSOR = AHT1x_SENSOR);
+   AHTxx(uint8_t address = AHTXX_ADDRESS_X38, AHTXX_I2C_SENSOR = AHT1x_SENSOR, TwoWire* wire = &Wire);
 
   #if defined (ARDUINO_ARCH_AVR)
    bool     begin(uint32_t speed = AHTXX_I2C_SPEED_HZ, uint32_t stretch = AHTXX_I2C_STRETCH_USEC);
@@ -166,6 +166,7 @@ class AHTxx
    uint8_t          _address;
    uint8_t          _status;
    uint8_t          _rawData[7] = {0, 0, 0, 0, 0, 0, 0}; //{status, RH, RH, RH+T, T, T, CRC}, CRC for AHT2x only
+   TwoWire* _wire; // <-- Add this line
 
    bool     _setInitializationRegister(uint8_t value); 
    uint8_t  _readStatusRegister();
