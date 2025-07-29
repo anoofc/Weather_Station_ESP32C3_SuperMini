@@ -1,0 +1,25 @@
+{
+  "name": "esp_ahtxx",
+  "keywords": "esp32, espressif, espidf, temperature, humidity, aht10, aht20, aht21, aht25, aht30, i2c, ahtxx, asair",
+  "description": "ESP32 espressif IoT development framework (esp-idf) compatible component for Asair AHT10, AHT20, AHT21, AHT25, AHT30 temperature and humidity I2C sensors.",
+  "authors": [
+    {
+      "name": "Eric Gionet",
+      "email": "gionet.c.eric@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/K0I05/ESP32-S3_ESP-IDF_COMPONENTS/tree/main/components/peripherals/i2c/esp_ahtxx"
+  },
+  "homepage": "https://github.com/K0I05/ESP32-S3_ESP-IDF_COMPONENTS",
+  "version": "1.2.6",
+  "license": "MIT",
+  "frameworks": "espidf",
+  "platforms": "espressif32",
+  "headers": "ahtxx.h",
+  "dependencies": {
+    "k0i05/esp_type_utils": ">=1.0.0"
+  }
+}
